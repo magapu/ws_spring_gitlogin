@@ -12,7 +12,7 @@ public class GitLoginController {
 
     @GetMapping("/githubLogin")
     public String gitHubLogin(Principal principal){
-        System.out.println("data---> "+ principal);
+        log.info("user Data===> " + principal);
         return  principal.getName();
     }
 }
