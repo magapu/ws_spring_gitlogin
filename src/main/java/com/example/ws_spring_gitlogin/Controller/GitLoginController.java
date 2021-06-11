@@ -10,7 +10,7 @@ import java.security.Principal;
 @RestController
 public class GitLoginController {
 
-    @GetMapping("/githubLogin")
+    @GetMapping("/")
     public String gitHubLogin(Principal principal){
         log.info("user Data===> " + principal);
         return  principal.getName();
