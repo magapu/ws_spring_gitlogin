@@ -12,12 +12,11 @@ public class GitLoginController {
 
     @GetMapping("/")
     @CrossOrigin
-    public UserDetailsDTO getData(OAuth2AuthenticationToken oAuth2AuthenticationToken){
-        log.info("User Info===> " + oAuth2AuthenticationToken.getPrincipal());
+    public UserDetailsDTO gitHubLogin(OAuth2AuthenticationToken oAuth2AuthenticationToken){
         UserDetailsDTO userDetailsDTO = new UserDetailsDTO();
+        log.info("user Data===> " + oAuth2AuthenticationToken.getPrincipal());
         userDetailsDTO.setEmail(oAuth2AuthenticationToken.getPrincipal().getAttribute("email"));
         userDetailsDTO.setUserName(oAuth2AuthenticationToken.getPrincipal().getAttribute("name"));
-        userDetailsDTO.setProfilePicture(oAuth2AuthenticationToken.getPrincipal().getAttribute("picture"));
-        return userDetailsDTO;
+        return  userDetailsDTO;
     }
 }
