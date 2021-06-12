@@ -4,7 +4,7 @@ package com.example.ws_spring_gitlogin.Controller;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.security.Principal;
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 
 @Slf4j
 @RestController
